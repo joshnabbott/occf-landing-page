@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="main.css" type="text/css" media="screen" />
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
   <script type="text/javascript" src="jquery.easing.min.js"></script>
-  <script type="text/javascript" src="supersized.3.2.7.min.js"></script>
-  <script type="text/javascript" src="supersized.shutter.min.js"></script>
 </head>
 <body>
   <header>
@@ -34,18 +32,38 @@
   <footer>
     <p>All content Copyright &copy; 2012 Orange Coast CrossFit.</p>
   </footer>
+  <script type="text/javascript" src="supersized.3.2.7.min.js"></script>
+  <script type="text/javascript" src="supersized.shutter.min.js"></script>
   <script type="text/javascript">
     jQuery(function($) {
+      // Cascading load animations
+      $('header nav, header h1, footer p').hide();
+      setTimeout(function() {
+        $('header nav').slideDown('fast', function() {
+          $('header h1').fadeIn('fast', function() {
+            $('footer p').fadeIn('slow');
+          });
+        });
+      }, 500);
+      $(document).hover(function() {
+        // Mouse in
+        $('header nav').slideDown('fast');
+      }, function() {
+        // Mouse out
+        $('header nav').slideUp('fast');
+      });
+
       $.supersized({
-        slide_interval: 6000, // Length between transitions
-        transition: 1, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-        transition_speed: 700, // Speed of transition
-        slide_links: false, // Individual links for each slide (Options: false, 'num', 'name', 'blank')
+        slide_interval: 6000,
+        transition: 1,
+        transition_speed: 700,
+        slide_links: false,
+        new_window: false,
         slides: [
+          { image : 'background-04.jpg', title: "Don't underestimate yourself.", url : '#' },
           { image : 'background-01.jpg', title: '', url : '#' },
           { image : 'background-02.jpg', title: '', url : '#' },
           { image : 'background-03.jpg', title: '', url : '#' },
-          { image : 'background-04.jpg', title: '', url : '#' },
           { image : 'background-05.jpg', title: '', url : '#' }
         ]
       });
