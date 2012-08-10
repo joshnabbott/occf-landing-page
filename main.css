@@ -58,8 +58,11 @@ header nav a {
 
 header nav a:hover, header nav a:active {
   color: #de232b;
-  text-shadow: 2px 2px 1px #000;
-  filter: dropshadow(color=#000, offx=2, offy=2);
+  text-shadow: 1px 1px 1px #000;
+  filter: dropshadow(color=#000, offx=1, offy=1);
+  transition: color .05s ease-in-out;
+  -moz-transition: color .05s ease-in-out;
+  -webkit-transition: color .05s ease-in-out;
 }
 
 footer {
