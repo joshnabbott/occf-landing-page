@@ -54,12 +54,12 @@ header nav {
 
 header nav a {
   margin-left: 28px;
-  text-shadow: 2px 2px 1px #000;
-  filter: dropshadow(color=#000, offx=2, offy=2);
 }
 
 header nav a:hover, header nav a:active {
   color: #de232b;
+  text-shadow: 2px 2px 1px #000;
+  filter: dropshadow(color=#000, offx=2, offy=2);
 }
 
 footer {
