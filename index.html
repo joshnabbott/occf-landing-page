@@ -33,25 +33,10 @@
     <p>All content Copyright &copy; 2012 Orange Coast CrossFit.</p>
   </footer>
   <script type="text/javascript" src="supersized.3.2.7.min.js"></script>
-  <script type="text/javascript" src="supersized.shutter.min.js"></script>
+  <script type="text/javascript" src="supersized.occf.shutter.min.js"></script>
   <script type="text/javascript">
     jQuery(function($) {
-      // Cascading load animations
       $('header nav, header h1, footer p').hide();
-      setTimeout(function() {
-        $('header nav').slideDown('fast', function() {
-          $('header h1').fadeIn('fast', function() {
-            $('footer p').fadeIn('slow');
-          });
-        });
-      }, 500);
-      $(document).hover(function() {
-        // Mouse in
-        $('header nav').slideDown('fast');
-      }, function() {
-        // Mouse out
-        $('header nav').slideUp('fast');
-      });
 
       $.supersized({
         slide_interval: 6000,
@@ -60,10 +45,10 @@
         slide_links: false,
         new_window: false,
         slides: [
-          { image : 'background-04.jpg', title: "Don't underestimate yourself.", url : '#' },
           { image : 'background-01.jpg', title: '', url : '#' },
           { image : 'background-02.jpg', title: '', url : '#' },
           { image : 'background-03.jpg', title: '', url : '#' },
+          { image : 'background-04.jpg', title: '', url : '#' },
           { image : 'background-05.jpg', title: '', url : '#' }
         ]
       });
