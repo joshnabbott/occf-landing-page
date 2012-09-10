@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Orange Coast CrossFit | OC's Premier CrossFit Gym</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="http://orangecoastcrossfit.com/landing/main.css" type="text/css" media="screen" />
+  <!--[if lt IE 7]>
+    <link rel="stylesheet" href="landing/ie.css" type="text/css" media="screen" />
+  <![endif]-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://orangecoastcrossfit.com/landing/jquery.easing.min.js"></script>
+</head>
+<body>
+  <div id="ie-fail">
+    <p>You desperately need to get a modern browser: <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>, <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Chrome</a>, <a href="http://ie.microsoft.com/testdrive/Info/Downloads/Default.html" target="_blank">Internet Explorer</a>. And prepare to be amazed at how purdy the internet looks.</p>
+  </div>
+  <div id="header">
+    <div id="nav">
+      <p>
+        <a href="http://orangecoastcrossfit.com/getting-started/">Get Started</a>
+        <a href="http://orangecoastcrossfit.com/wod-blog/">WOD Blog</a>
+        <a href="https://clients.mindbodyonline.com/ASP/home.asp?studioid=9290">Classes</a>
+        <a href="http://orangecoastcrossfit.com/contact-us/">Contact Us</a>
+      </p>
+    </div>
+    <h1><a href="http://orangecoastcrossfit.com/">[OCCF]</a></h1>
+  </div>
+  <div>
+    <!--Thumbnail Navigation-->
+    <div id="prevthumb"></div>
+    <div id="nextthumb"></div>
+
+    <!--Arrow Navigation-->
+    <a id="prevslide" class="load-item"></a>
+    <a id="nextslide" class="load-item"></a>
+    <ul id="slide-list"></ul>
+  </div>
+  <div id="footer">
+    <p>All content Copyright &copy; 2012 Orange Coast CrossFit.</p>
+  </div>
+  <script type="text/javascript" src="http://orangecoastcrossfit.com/landing/supersized.3.2.7.min.js"></script>
+  <script type="text/javascript" src="http://orangecoastcrossfit.com/landing/supersized.occf.shutter.min.js"></script>
+  <script type="text/javascript">
+    jQuery(function($) {
+      $('#nav, #header h1, #slide-list, #footer p').hide();
+
+      $.supersized({
+        slide_interval: 6000,
+        transition: 1,
+        transition_speed: 700,
+        slide_links: 'blank',
+        horizontal_center: 1,
+        slides: [
+          { image: 'http://orangecoastcrossfit.com/landing/background-01.jpg' },
+          { image: 'http://orangecoastcrossfit.com/landing/background-02.jpg' },
+          { image: 'http://orangecoastcrossfit.com/landing/background-03.jpg' },
+          { image: 'http://orangecoastcrossfit.com/landing/background-04.jpg' },
+          { image: 'http://orangecoastcrossfit.com/landing/background-05.jpg' },
+          { image: 'http://orangecoastcrossfit.com/landing/background-06.jpg' }
+        ]
+      });
+    });
+  </script>
+</body>
+</html>
+
