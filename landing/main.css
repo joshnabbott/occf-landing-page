@@ -18,6 +18,11 @@ body {
   color: #fff;
   font-family: LeagueGothic;
   font-size: 30px;
+  overflow-x: hidden;
+}
+
+#ie-fail {
+  display: none;
 }
 
 a:link, a:visited {
@@ -26,16 +31,16 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  color: #cacaca;
+  color: #de232b;
 }
 
-header h1 {
-  bottom: 33px;
+#header h1 {
+  top: 20px;
   left: 41px;
-  position: absolute;
+  position: relative;
 }
 
-header h1 a {
+#header h1 a {
   background: url('logo.png') 0 0 no-repeat;
   display: block;
   height: 119px;
@@ -43,7 +48,7 @@ header h1 a {
   width: 200px;
 }
 
-header nav {
+#nav {
   background-color: rgba(0, 0, 0, 0.5);
   height: 77px;
   line-height: 77px;
@@ -52,11 +57,11 @@ header nav {
   width: 100%;
 }
 
-header nav a {
+#nav a {
   margin-left: 28px;
 }
 
-header nav a:hover, header nav a:active {
+#nav a:hover, #nav a:active {
   color: #de232b;
   text-shadow: 1px 1px 1px #000;
   filter: dropshadow(color=#000, offx=1, offy=1);
@@ -65,10 +70,14 @@ header nav a:hover, header nav a:active {
   -webkit-transition: color .05s ease-in-out;
 }
 
-footer {
+#footer {
   bottom: 9px;
-  font-family: Helvetica;
-  font-size: 12px;
   position: absolute;
   right: 9px;
 }
+
+#footer p {
+  font-family: Helvetica;
+  font-size: 12px;
+}
+

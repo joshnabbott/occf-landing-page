@@ -1,0 +1,10 @@
+#ie-fail {
+  background-color: #de232b;
+  display: block;
+  padding: 10px;
+}
+
+#ie-fail a:active, #ie-fail a:hover {
+  color: #000;
+}
+
