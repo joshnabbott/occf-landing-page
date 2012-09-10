@@ -5,22 +5,29 @@
   <title>Orange Coast CrossFit | OC's Premier CrossFit Gym</title>
   <link rel="stylesheet" href="main.css">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="stylesheet" href="main.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="landing/main.css" type="text/css" media="screen" />
+  <!--[if lt IE 7]>
+    <link rel="stylesheet" href="landing/ie.css" type="text/css" media="screen" />
+  <![endif]-->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-  <script type="text/javascript" src="jquery.easing.min.js"></script>
+  <script type="text/javascript" src="landing/jquery.easing.min.js"></script>
 </head>
 <body>
-  <header>
-    <h1><a href="">[OCCF]</a></h1>
-    <nav>
+  <div id="ie-fail">
+    <p>You desperately need to get a modern browser: <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>, <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Chrome</a>, <a href="http://ie.microsoft.com/testdrive/Info/Downloads/Default.html" target="_blank">Internet Explorer</a>. And prepare to be amazed at how purdy the internet looks.</p>
+  </div>
+  <div id="header">
+    <div id="nav">
       <p>
-        <a href="">Get Started</a>
-        <a href="">Success Stories</a>
-        <a href="">Who We Are</a>
+        <a href="http://orangecoastcrossfit.com/getting-started/">Get Started</a>
+        <a href="http://orangecoastcrossfit.com/blog/">WOD Blog</a>
+        <a href="https://clients.mindbodyonline.com/ASP/home.asp?studioid=9290">Classes</a>
+        <a href="http://orangecoastcrossfit.com/contact-us/">Contact Us</a>
       </p>
-    </nav>
-  </header>
-  <article>
+    </div>
+    <h1><a href="http://orangecoastcrossfit.com/">[OCCF]</a></h1>
+  </div>
+  <div>
     <!--Thumbnail Navigation-->
     <div id="prevthumb"></div>
     <div id="nextthumb"></div>
@@ -30,28 +37,28 @@
     <a id="nextslide" class="load-item"></a>
     <ul id="slide-list"></ul>
   </div>
-  </article>
-  <footer>
+  <div id="footer">
     <p>All content Copyright &copy; 2012 Orange Coast CrossFit.</p>
-  </footer>
-  <script type="text/javascript" src="supersized.3.2.7.min.js"></script>
-  <script type="text/javascript" src="supersized.occf.shutter.min.js"></script>
+  </div>
+  <script type="text/javascript" src="landing/supersized.3.2.7.min.js"></script>
+  <script type="text/javascript" src="landing/supersized.occf.shutter.min.js"></script>
   <script type="text/javascript">
     jQuery(function($) {
-      $('header nav, header h1, #slide-list, footer p').hide();
+      $('#nav, #header h1, #slide-list, #footer p').hide();
 
       $.supersized({
         slide_interval: 6000,
         transition: 1,
         transition_speed: 700,
         slide_links: 'blank',
-        new_window: false,
+        horizontal_center: 1,
         slides: [
-          { image : 'background-01.jpg', title: '', url : '#' },
-          { image : 'background-02.jpg', title: '', url : '#' },
-          { image : 'background-03.jpg', title: '', url : '#' },
-          { image : 'background-04.jpg', title: '', url : '#' },
-          { image : 'background-05.jpg', title: '', url : '#' }
+          { image: 'landing/background-01.jpg' },
+          { image: 'landing/background-02.jpg' },
+          { image: 'landing/background-03.jpg' },
+          { image: 'landing/background-04.jpg' },
+          { image: 'landing/background-05.jpg' },
+          { image: 'landing/background-06.jpg' }
         ]
       });
     });
